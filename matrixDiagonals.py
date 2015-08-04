@@ -2,6 +2,7 @@
 
 class Diagonals:
     def __init__(self, size, matrix):
+        self._set_constraints()
         self.size = int(size)
         self.matrix = self._set_matrix_values(matrix)
         self._set_constraints()
@@ -22,7 +23,7 @@ class Diagonals:
 
     def _verify_elements(self, line):
         for x in line:
-            if int(x) > 100 or int(x) < -100:
+            if int(self.element_maximum_size) > 100 or int(self.element_minimum_size) < -100:
                 exit(0)
 
     def _get_first_diagonal(self):
