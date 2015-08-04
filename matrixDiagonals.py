@@ -15,12 +15,12 @@ class Diagonals:
         self.element_minimum_size = -100
 
     def _verify_size(self):
-        if self.size >= self.matrix_maximum_size or self.size <= self.matrix_minimum_size:
+        if self.size > self.matrix_maximum_size or self.size < self.matrix_minimum_size:
             exit(0)
 
     def _verify_elements(self, line):
         for x in line:
-            if int(x) >= 100 or int(x) <= -100:
+            if int(x) > 100 or int(x) < -100:
                 exit(0)
 
     def _get_first_diagonal(self):
