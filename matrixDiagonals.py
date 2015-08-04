@@ -1,3 +1,5 @@
+#! python3
+
 class Diagonals:
     def __init__(self, size, matrix):
         self.size = int(size)
