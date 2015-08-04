@@ -21,7 +21,7 @@ class Diagonals:
 
     def _verify_elements(self, line):
         for x in line:
-            if int(self.element_maximum_size) > 100 or int(self.element_minimum_size) < -100:
+            if int(x) > self.element_maximum_size or int(x) < self.element_minimum_size:
                 exit(0)
 
     def _get_first_diagonal(self):
