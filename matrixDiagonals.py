@@ -5,8 +5,6 @@ class Diagonals:
         self._set_constraints()
         self.size = int(size)
         self.matrix = self._set_matrix_values(matrix)
-        self._set_constraints()
-        self._verify_size()
         self.first = self._get_first_diagonal()
         self.second = self._get_second_diagonal()
 
@@ -43,6 +41,7 @@ class Diagonals:
         return(second)
 
     def _set_matrix_values(self, matrix):
+        self._verify_size()
         m = []
         for x in matrix:
             self._verify_elements(x.split())
